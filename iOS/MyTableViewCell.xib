@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myUniqueCell" rowHeight="566" id="cxk-wN-pdQ" customClass="MyTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myUniqueCell" rowHeight="566" id="cxk-wN-pdQ" customClass="MyTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="639" height="566"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
@@ -21,13 +21,41 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZbR-gi-L5I">
                                 <rect key="frame" x="0.0" y="0.0" width="623" height="518"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-CO-uiN">
-                                        <rect key="frame" x="290.5" y="0.0" width="42" height="259"/>
-                                        <edgeInsets key="layoutMargins" top="40" left="40" bottom="40" right="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vz8-ye-CvB">
+                                        <rect key="frame" x="0.0" y="0.0" width="623" height="259"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-CO-uiN">
+                                                <rect key="frame" x="98" y="54.5" width="42" height="20.5"/>
+                                                <edgeInsets key="layoutMargins" top="40" left="40" bottom="40" right="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-De-Mzz">
+                                                <rect key="frame" x="98" y="8" width="163.5" height="32.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYp-A0-hWJ">
+                                                <rect key="frame" x="-510" y="99" width="1283" height="21"/>
+                                                <string key="text">Label above me can have arbitrary line counts, because its line count property is set to 0. Also note that a stackview will mess up the button heights (because different items can have different line counts, which leads to different sectino heights)</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="RYp-A0-hWJ" firstAttribute="top" secondItem="qpN-CO-uiN" secondAttribute="bottom" constant="8" id="NMq-h0-hz4"/>
+                                            <constraint firstItem="Q07-De-Mzz" firstAttribute="top" secondItem="vz8-ye-CvB" secondAttribute="top" constant="8" id="T9d-AQ-7km"/>
+                                            <constraint firstItem="RYp-A0-hWJ" firstAttribute="leading" secondItem="qpN-CO-uiN" secondAttribute="leading" id="Te9-Ye-mZ5"/>
+                                            <constraint firstAttribute="trailing" secondItem="RYp-A0-hWJ" secondAttribute="trailing" constant="8" id="W5t-ed-9Sj"/>
+                                            <constraint firstItem="Q07-De-Mzz" firstAttribute="leading" secondItem="qpN-CO-uiN" secondAttribute="leading" id="bLM-at-THr"/>
+                                            <constraint firstItem="qpN-CO-uiN" firstAttribute="top" secondItem="Q07-De-Mzz" secondAttribute="bottom" constant="14" id="d4z-hQ-2rV"/>
+                                            <constraint firstAttribute="bottom" secondItem="RYp-A0-hWJ" secondAttribute="bottom" constant="8" id="jK9-Ea-Hcx"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QO-m3-q2W">
                                         <rect key="frame" x="0.0" y="259" width="623" height="259"/>
                                         <subviews>
@@ -35,13 +63,13 @@
                                                 <rect key="frame" x="8" y="8" width="299.5" height="243"/>
                                                 <color key="backgroundColor" red="0.087490223348140717" green="0.73617839813232422" blue="0.20258402824401855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
-                                                <state key="normal" title="Right"/>
+                                                <state key="normal" title="Left"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-L7-CTE">
-                                                <rect key="frame" x="315.5" y="8" width="299.5" height="243"/>
-                                                <color key="backgroundColor" red="0.16685816645622253" green="0.09828571230173111" blue="0.94948571920394897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="315" y="8" width="299.5" height="243"/>
+                                                <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
-                                                <state key="normal" title="Left"/>
+                                                <state key="normal" title="Right"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.01026766514" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,13 +93,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8QO-m3-q2W" firstAttribute="width" secondItem="ZbR-gi-L5I" secondAttribute="width" id="SzW-Uo-zqj"/>
-                                    <constraint firstItem="qpN-CO-uiN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZbR-gi-L5I" secondAttribute="top" constant="16" id="XsO-CJ-IrN"/>
+                                    <constraint firstItem="vz8-ye-CvB" firstAttribute="width" secondItem="ZbR-gi-L5I" secondAttribute="width" id="ay1-jY-EqU"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="XsO-CJ-IrN"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,19 +124,21 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.16685816645622253" green="0.09828571230173111" blue="0.94948571920394897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="QSf-EC-E9G" secondAttribute="bottom" constant="60" id="2NU-Ou-Ouc"/>
                     <constraint firstItem="QSf-EC-E9G" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" constant="8" id="2bj-d0-MaJ"/>
                     <constraint firstItem="hyz-g3-EbO" firstAttribute="height" secondItem="YTl-1W-gDM" secondAttribute="height" constant="-48" id="2zD-rH-aBg"/>
                     <constraint firstItem="hyz-g3-EbO" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="BIG-Vb-65e"/>
+                    <constraint firstItem="qpN-CO-uiN" firstAttribute="leading" secondItem="QSf-EC-E9G" secondAttribute="trailing" constant="10" id="D2Y-o9-Fed"/>
                     <constraint firstItem="hyz-g3-EbO" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="40" id="VGn-Lk-EdZ"/>
                     <constraint firstItem="hyz-g3-EbO" firstAttribute="width" secondItem="YTl-1W-gDM" secondAttribute="width" constant="-16" id="ekE-4E-fiy"/>
                     <constraint firstItem="QSf-EC-E9G" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="8" id="nGp-n9-Eep"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="leftButton" destination="YcZ-L7-CTE" id="XM3-xA-r1U"/>
-                <outlet property="rightButton" destination="CpF-4S-VGK" id="UoD-s7-UAz"/>
+                <outlet property="leftButton" destination="CpF-4S-VGK" id="DlG-IZ-we7"/>
+                <outlet property="rightButton" destination="YcZ-L7-CTE" id="mh0-RR-kd6"/>
                 <outlet property="textLabel" destination="qpN-CO-uiN" id="yhE-9m-Arv"/>
             </connections>
             <point key="canvasLocation" x="694.5" y="374"/>
