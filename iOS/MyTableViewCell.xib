@@ -28,39 +28,47 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hn-Zp-Zwq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QO-m3-q2W">
                                         <rect key="frame" x="0.0" y="259" width="623" height="259"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-L7-CTE">
-                                                <rect key="frame" x="0.0" y="0.0" width="311.5" height="259"/>
-                                                <color key="backgroundColor" red="0.16685816645622253" green="0.09828571230173111" blue="0.94948571920394897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
-                                                <state key="normal" title="Left"/>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpF-4S-VGK">
-                                                <rect key="frame" x="311.5" y="0.0" width="311.5" height="259"/>
+                                                <rect key="frame" x="8" y="8" width="299.5" height="243"/>
                                                 <color key="backgroundColor" red="0.087490223348140717" green="0.73617839813232422" blue="0.20258402824401855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
                                                 <state key="normal" title="Right"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-L7-CTE">
+                                                <rect key="frame" x="315.5" y="8" width="299.5" height="243"/>
+                                                <color key="backgroundColor" red="0.16685816645622253" green="0.09828571230173111" blue="0.94948571920394897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                                <state key="normal" title="Left"/>
+                                            </button>
                                         </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.01026766514" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="CpF-4S-VGK" firstAttribute="height" secondItem="7hn-Zp-Zwq" secondAttribute="height" id="T0j-5Z-l9H"/>
-                                            <constraint firstItem="CpF-4S-VGK" firstAttribute="width" secondItem="YcZ-L7-CTE" secondAttribute="width" id="Y6n-89-r8h"/>
-                                            <constraint firstItem="YcZ-L7-CTE" firstAttribute="height" secondItem="CpF-4S-VGK" secondAttribute="height" id="xf0-vb-hw2"/>
+                                            <constraint firstItem="YcZ-L7-CTE" firstAttribute="leading" secondItem="CpF-4S-VGK" secondAttribute="trailing" constant="8" id="8Ho-d5-6mT"/>
+                                            <constraint firstItem="CpF-4S-VGK" firstAttribute="top" secondItem="8QO-m3-q2W" secondAttribute="top" constant="8" id="Cka-wG-Mr9"/>
+                                            <constraint firstItem="YcZ-L7-CTE" firstAttribute="height" secondItem="CpF-4S-VGK" secondAttribute="height" id="FC5-L0-MqU"/>
+                                            <constraint firstItem="CpF-4S-VGK" firstAttribute="leading" secondItem="8QO-m3-q2W" secondAttribute="leading" constant="8" id="OkE-HH-efM"/>
+                                            <constraint firstItem="CpF-4S-VGK" firstAttribute="width" secondItem="YcZ-L7-CTE" secondAttribute="width" id="Rtp-iV-pz1"/>
+                                            <constraint firstItem="YcZ-L7-CTE" firstAttribute="leading" secondItem="CpF-4S-VGK" secondAttribute="trailing" constant="-77" id="Uv5-Ql-sNA"/>
+                                            <constraint firstItem="YcZ-L7-CTE" firstAttribute="top" secondItem="8QO-m3-q2W" secondAttribute="top" constant="8" id="a3B-WE-hxa"/>
+                                            <constraint firstAttribute="trailing" secondItem="YcZ-L7-CTE" secondAttribute="trailing" constant="8" id="ufP-WZ-bSq"/>
+                                            <constraint firstAttribute="bottom" secondItem="YcZ-L7-CTE" secondAttribute="bottom" constant="8" id="uye-dv-HOF"/>
                                         </constraints>
-                                    </stackView>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Uv5-Ql-sNA"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="8QO-m3-q2W" firstAttribute="width" secondItem="ZbR-gi-L5I" secondAttribute="width" id="SzW-Uo-zqj"/>
                                     <constraint firstItem="qpN-CO-uiN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZbR-gi-L5I" secondAttribute="top" constant="16" id="XsO-CJ-IrN"/>
-                                    <constraint firstItem="7hn-Zp-Zwq" firstAttribute="width" secondItem="ZbR-gi-L5I" secondAttribute="width" id="eEM-G3-XnS"/>
-                                    <constraint firstItem="7hn-Zp-Zwq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qpN-CO-uiN" secondAttribute="bottom" constant="16" id="kpK-oD-RMR"/>
-                                    <constraint firstItem="7hn-Zp-Zwq" firstAttribute="height" secondItem="qpN-CO-uiN" secondAttribute="height" id="oLR-JY-jPh"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="kpK-oD-RMR"/>
-                                        <exclude reference="oLR-JY-jPh"/>
                                         <exclude reference="XsO-CJ-IrN"/>
                                     </mask>
                                 </variation>
